@@ -3,6 +3,12 @@ let totalPrecio = 0; let totalArticulos = 0;
 let catalogoPerfumes = [];
 let ofertasGlobales = {};
 
+// Quitar la pantalla de bienvenida interactiva
+function entrarTienda() {
+    document.getElementById('pantalla-bienvenida').classList.add('oculta');
+    document.body.classList.remove('bloqueado');
+}
+
 function crearFondoMagico() {
     let contenedor = document.getElementById('contenedor-magico');
     let colores = ["%23EFBF04", "%232B0071"]; 

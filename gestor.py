@@ -100,8 +100,12 @@ def menu_principal():
                 input("\n❌ Error: Debes ingresar números enteros. Enter...")
                 continue
             desc = input("Descripción persuasiva: ")
-            imagen_input = input("Nombre exacto del archivo de imagen (ej. perfume.jpg): ")
-            imagen = imagen_input if imagen_input.strip() != "" else ""
+            
+            imagen_input = input("Nombre exacto de la foto con su formato (ej. sauvage.jpg, foto1.png) [Enter para usar ✨]: ").strip()
+            if imagen_input == "":
+                imagen = "✨"
+            else:
+                imagen = imagen_input
             
             datos['productos'].append({
                 "subseccion": sub, "nombre": nombre, "precio": precio, 
@@ -147,7 +151,7 @@ def menu_principal():
         elif op == '7':
             limpiar_pantalla()
             print("🚀 Sincronizando con el servidor central...")
-            os.system('git add . && git commit -m "Actualizacion Alqimia Luma" && git push')
+            os.system('git add . && git commit -m "Actualizacion Inventario Alqimia Luma" && git push')
             input("\n✅ ¡Todo subido a internet con éxito! Enter...")
         elif op == '8': break
 

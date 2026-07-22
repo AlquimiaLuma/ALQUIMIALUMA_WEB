@@ -7,7 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bloqueado">
+
+    <!-- PANTALLA INTERACTIVA DE BIENVENIDA -->
+    <div id="pantalla-bienvenida" class="pantalla-bienvenida">
+        <div class="contenido-bienvenida">
+            <img src="logo.png" alt="Alqimia Luma Logo" class="logo-bienvenida" onerror="this.src='https://via.placeholder.com/160/EFBF04/2B0071?text=✨'">
+            <h1 class="titulo-bienvenida">ALQIMIA LUMA</h1>
+            <p class="slogan-bienvenida">Tu esencia, tu firma. Descubre nuestras fragancias calidad 1:1 espejo. Alta gama que despierta emociones y deja una huella imborrable, a un precio inteligente.</p>
+            <button class="btn-entrar" onclick="entrarTienda()">Descubrir Catálogo ✨</button>
+        </div>
+    </div>
 
     <div class="fondo-magico" id="contenedor-magico"></div>
 
@@ -43,6 +53,10 @@
     <footer class="pie-pagina">
         <p>📞 Contacto Alqimia Luma: +52 56 4931 4335</p>
         <p>🌐 <a href="https://facebook.com/share/1WMubxvPra/" target="_blank" class="link-facebook">SÍGUENOS EN FACEBOOK</a></p>
+        <br>
+        <p style="font-size: 11px; color: var(--lavanda); max-width: 80%; margin: 0 auto; line-height: 1.5; opacity: 0.8;">
+            * Nuestros productos son inspiraciones de calidad 1:1 espejo de alta gama. Las marcas registradas mencionadas son únicamente como referencia olfativa y no tenemos relación directa con las casas creadoras originales.
+        </p>
     </footer>
 
     <script src="script.js"></script>

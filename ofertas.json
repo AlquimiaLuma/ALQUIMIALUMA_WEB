@@ -1,10 +1,10 @@
 {
     "hombres": {
         "activa": false,
-        "texto": "¡Promoción especial para caballeros!"
+        "texto": ""
     },
     "mujeres": {
         "activa": false,
-        "texto": "¡Descuentos en fragancias femeninas!"
+        "texto": ""
     }
 }

@@ -8,21 +8,39 @@
 }
 
 body { background: radial-gradient(circle at top center, var(--pergamino) 0%, var(--pergamino-oscuro) 100%); color: var(--deep-indigo); font-family: 'Josefin Sans', sans-serif; margin: 0; padding: 0; text-align: center; overflow-x: hidden; padding-top: 100px; min-height: 100vh; }
+body.bloqueado { overflow: hidden; }
 
+/* --- PANTALLA DE BIENVENIDA (SPLASH SCREEN) --- */
+.pantalla-bienvenida {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(10, 10, 15, 0.75); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+    z-index: 9999; display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+.pantalla-bienvenida.oculta { opacity: 0; visibility: hidden; pointer-events: none; }
+.contenido-bienvenida {
+    text-align: center; padding: 50px 30px; border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px; background: rgba(43, 0, 113, 0.65); box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+    max-width: 90%; width: 450px;
+}
+.logo-bienvenida { width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 0 25px var(--oro); margin-bottom: 25px; object-fit: cover; border: 2px solid var(--pergamino); }
+.titulo-bienvenida { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin: 0; letter-spacing: 5px; color: var(--oro); text-shadow: 0 0 15px rgba(239,191,4,0.5); }
+.slogan-bienvenida { color: var(--pergamino); font-size: 1.1rem; margin: 20px 0 40px 0; font-weight: 300; line-height: 1.6; }
+.btn-entrar { background: var(--oro); color: var(--deep-indigo); border: none; padding: 15px 35px; font-size: 1.1rem; font-weight: 700; border-radius: 30px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+.btn-entrar:hover { transform: scale(1.05); box-shadow: 0 0 30px var(--oro); }
+
+/* --- RESTO DE LA TIENDA --- */
 .menu-categorias { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--deep-indigo); display: flex; gap: 15px; padding: 15px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; overflow-x: auto; white-space: nowrap; align-items: center; justify-content: center; }
 .btn-cat { background: transparent; color: var(--pergamino); border: 1px solid var(--lavanda); padding: 8px 20px; border-radius: 20px; font-size: 14px; cursor: pointer; transition: 0.3s; font-weight: 600; position: relative; }
 .btn-cat:hover, .btn-cat.activo { background: var(--oro); color: var(--deep-indigo); border-color: var(--oro); }
-
 .etiqueta-oferta { position: absolute; top: -10px; right: -5px; background: var(--rojo-oferta); color: white; font-size: 10px; padding: 3px 6px; border-radius: 10px; font-weight: bold; animation: palpitar 2s infinite; }
 @keyframes palpitar { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
-
 .banner-oferta-contenedor { width: 100%; margin-bottom: 30px; padding: 0 20px; box-sizing: border-box; }
 .banner-oferta-texto { background-color: var(--rojo-oferta); color: white; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4); border: 2px dashed #fff; letter-spacing: 1px; }
 
 .contenedor-agotado { background-color: var(--deep-indigo); border: 3px solid var(--oro); border-radius: 16px; padding: 40px 30px; max-width: 450px; margin: 50px auto; box-shadow: 0 10px 30px rgba(43, 0, 113, 0.4); text-align: center; }
 .texto-agotado-gigante { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--oro); margin: 0 0 15px 0; letter-spacing: 6px; text-shadow: 0 0 10px rgba(239, 191, 4, 0.5); }
 .subtexto-agotado { font-size: 1.1rem; color: var(--pergamino); margin: 0; }
-
 .fondo-magico { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 .estrella-js { position: absolute; background-size: contain; background-repeat: no-repeat; animation: latido-estrella 4s infinite alternate ease-in-out; }
 @keyframes latido-estrella { 0% { opacity: 0.15; transform: scale(0.85); } 100% { opacity: 0.7; transform: scale(1.15); } }
@@ -33,22 +51,17 @@ header { display: flex; flex-direction: column; align-items: center; padding: 20
 .titulo-gigante { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; letter-spacing: 3px; color: var(--deep-indigo); }
 
 .catalogo { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 10px 20px 40px 20px; }
-
 .tarjeta { background-color: rgba(255, 255, 255, 0.95); border: 2px solid var(--lavanda); border-radius: 12px; padding: 25px; width: 280px; transition: all 0.4s ease-in-out; display: flex; flex-direction: column; align-items: center; position: relative; box-shadow: 0 8px 20px rgba(43, 0, 113, 0.1); box-sizing: border-box; }
 .tarjeta:hover { transform: translateY(-8px); border-color: var(--deep-indigo); box-shadow: 0 12px 30px rgba(43, 0, 113, 0.25); }
 .tarjeta h2 { margin-top: 0; font-size: 1.4rem; font-family: 'Playfair Display', serif; color: var(--deep-indigo); line-height: 1.2; height: 50px; }
-
 .contenedor-img-perfume { width: 100%; height: 220px; background-color: #fcfcfc; border-radius: 8px; margin: 15px 0; border: 1px solid var(--lavanda); display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px; box-sizing: border-box; }
 .contenedor-img-perfume img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
-.desc { font-size: 14px; color: #444; line-height: 1.4; margin: 0 0 15px 0; min-height: 60px; }
+.desc { font-size: 14px; color: #444; line-height: 1.4; margin: 0 0 15px 0; min-height: 80px; }
 .precio { font-size: 26px; font-weight: 600; color: var(--deep-indigo); margin: 10px 0; margin-top: auto; }
 .stock { color: #666; font-size: 14px; margin-bottom: 20px; font-weight: bold; }
-
 button.btn-comprar { background-color: var(--oro); color: var(--deep-indigo); border: none; padding: 14px 20px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: 0.3s; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; }
 button.btn-comprar:hover:not([disabled]) { transform: scale(1.05); box-shadow: 0 0 25px rgba(239, 191, 4, 1); }
 button.btn-comprar:disabled { background-color: #e0e0e0; color: #888; cursor: not-allowed; }
-
 .tarjeta.agotado::after { content: "AGOTADO"; position: absolute; top: 40%; left: -15%; width: 130%; background-color: var(--deep-indigo); color: var(--oro); font-size: 1.5rem; font-weight: 600; transform: rotate(-25deg); text-align: center; padding: 10px 0; box-shadow: 0 4px 15px rgba(43, 0, 113, 0.4); z-index: 5; }
 
 #carrito-flotante { position: fixed; top: 80px; right: 20px; background-color: var(--deep-indigo); color: var(--oro); padding: 10px 25px; border-radius: 40px; font-size: 18px; font-weight: 600; cursor: pointer; box-shadow: 0 6px 20px rgba(43, 0, 113, 0.4); z-index: 1000; border: 2px solid var(--lavanda); display: flex; align-items: center; gap: 10px; }
@@ -60,7 +73,6 @@ button.btn-comprar:disabled { background-color: #e0e0e0; color: #888; cursor: no
 .item-carrito { display: flex; justify-content: space-between; margin: 15px 0; font-weight: 600; }
 .total-modal { font-size: 22px; font-weight: 600; border-top: 2px solid var(--lavanda); padding-top: 15px; }
 .btn-whatsapp-modal { background-color: var(--oro); color: var(--deep-indigo); border: none; padding: 14px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; }
-
 .pie-pagina { background-color: var(--deep-indigo); color: var(--pergamino); padding: 40px 0; margin-top: 50px; border-top: 2px solid var(--lavanda); }
 .link-facebook { color: var(--oro); text-decoration: underline; font-weight: bold; letter-spacing: 1px; }
 
@@ -73,4 +85,7 @@ button.btn-comprar:disabled { background-color: #e0e0e0; color: #888; cursor: no
     #carrito-flotante { top: 70px; right: 10px; padding: 5px 15px; font-size: 14px; }
     .luna-gigante { font-size: 1.8rem; }
     .menu-categorias { padding: 10px; justify-content: flex-start; }
+    .titulo-bienvenida { font-size: 2.2rem; }
+    .contenido-bienvenida { padding: 40px 20px; }
+    .logo-bienvenida { width: 120px; height: 120px; }
 }

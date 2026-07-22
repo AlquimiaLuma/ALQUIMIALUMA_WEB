@@ -6,7 +6,7 @@
             "nombre": "Dior Sauvage Parfum (100ml)",
             "precio": 3500,
             "stock": 2,
-            "desc": "El poder de la noche y la naturaleza. Notas amaderadas intensas para el hombre que deja una huella imborrable.",
+            "desc": "Notas amaderadas y bergamota. Despierta tu lado salvaje y magnético; proyectarás una estela de frescura nocturna que dejará a todos intrigados.",
             "imagen": "sauvage.jpg"
         },
         {
@@ -14,7 +14,7 @@
             "nombre": "Versace Eros (200ml)",
             "precio": 2800,
             "stock": 1,
-            "desc": "Frescura vibrante de menta y manzana verde combinada con vainilla. Seducción y poder en estado puro.",
+            "desc": "Menta, manzana verde y vainilla. El aura de un dios griego. Proyectarás un magnetismo dulce y vibrante que te hará el centro de atención.",
             "imagen": "eros.jpg"
         },
         {
@@ -22,7 +22,7 @@
             "nombre": "Paco Rabanne 1 Million (100ml)",
             "precio": 2500,
             "stock": 1,
-            "desc": "El aroma del éxito. Cuero, canela y mandarina sanguina. Una fragancia magnética que no pasa desapercibida.",
+            "desc": "Cuero, canela y mandarina. El aroma del éxito absoluto. Te sentirás poderoso, invencible y listo para conquistar cualquier reto.",
             "imagen": "1million.jpg"
         },
         {
@@ -30,7 +30,7 @@
             "nombre": "Calvin Klein CK One (200ml)",
             "precio": 1500,
             "stock": 1,
-            "desc": "El clásico atemporal. Una fragancia cítrica y refrescante que transmite libertad y autenticidad.",
+            "desc": "Té verde, papaya y bergamota. Frescura infinita y limpia. Te envolverá en una vibra relajada, juvenil y perfecta para el día a día.",
             "imagen": "ckone.jpg"
         },
         {
@@ -38,7 +38,7 @@
             "nombre": "Chanel Coco Mademoiselle (100ml)",
             "precio": 4000,
             "stock": 1,
-            "desc": "La esencia de una mujer libre y audaz. Un oriental femenino de carácter fuerte pero sorprendentemente fresco.",
+            "desc": "Naranja, rosa turca y pachulí. Un oriental fresco. Caminarás con una elegancia rebelde, dejando un rastro de sofisticación empoderada.",
             "imagen": "coco.jpg"
         },
         {
@@ -46,7 +46,7 @@
             "nombre": "Chance Chanel Eau de Parfum (100ml)",
             "precio": 3800,
             "stock": 1,
-            "desc": "Imprevisible y en constante movimiento. Notas florales entrelazadas con pimienta rosa. Un torbellino de felicidad.",
+            "desc": "Pimienta rosa, jazmín y pachulí ambarino. Un torbellino floral cálido. Sentirás una ola de misterio y calidez que te acompañará día y noche.",
             "imagen": "chance_edp.jpg"
         },
         {
@@ -54,7 +54,7 @@
             "nombre": "Chance Chanel Eau Fraîche (100ml)",
             "precio": 3500,
             "stock": 1,
-            "desc": "Una lluvia de frescura. Maderas de teca y cítricos radiantes que te envuelven en una energía vibrante.",
+            "desc": "Madera de teca, limón y jazmín. Una explosión de energía pura. Olerás radiante, chispeante y llena de vitalidad vibrante.",
             "imagen": "chance_ef.jpg"
         },
         {
@@ -62,7 +62,7 @@
             "nombre": "Valentino Donna Born in Roma Intense",
             "precio": 3400,
             "stock": 1,
-            "desc": "Una explosión floral y de alta costura. Vainilla bourbon entrelazada con jazmín luminoso. Elegancia rebelde.",
+            "desc": "Vainilla bourbon, jazmín y toques amaderados. Alta costura en tu piel. Irradiarás una sensualidad dulce, moderna y profundamente cautivadora.",
             "imagen": "valentino.jpg"
         },
         {
@@ -70,7 +70,7 @@
             "nombre": "JPG Scandal Intense (100ml)",
             "precio": 3200,
             "stock": 1,
-            "desc": "Un golpe de audacia y sensualidad. Notas de caramelo salado y jazmín que rompen las reglas y acaparan miradas.",
+            "desc": "Miel jugosa, jazmín y caramelo salado. Una bomba de seducción. Olerás deliciosamente atrevida, ideal para romper las reglas de la noche.",
             "imagen": "scandal.jpg"
         }
     ]
