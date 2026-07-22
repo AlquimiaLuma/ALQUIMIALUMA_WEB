@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alqimia Luma | Catálogo Mágico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="fondo-magico" id="contenedor-magico"></div>
+
+    <nav class="menu-categorias">
+        <button class="btn-cat activo" id="btn-todos" onclick="filtrarSeccion('todos')">🌟 Catálogo Completo</button>
+        <button class="btn-cat" id="btn-mujeres" onclick="filtrarSeccion('mujeres')">✨ Mujeres</button>
+        <button class="btn-cat" id="btn-hombres" onclick="filtrarSeccion('hombres')">🌙 Hombres</button>
+    </nav>
+
+    <div id="carrito-flotante" onclick="abrirCarrito()">
+        <span class="luna-gigante">🌙</span> Pedido (<span id="contador">0</span>)
+    </div>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+            <h2 class="titulo-modal">Tu Pedido Mágico</h2>
+            <div id="lista-carrito"></div>
+            <p class="total-modal">Total: $<span id="total-precio">0</span></p>
+            <button class="btn-whatsapp-modal" onclick="enviarPedido()">Terminar pedido en WhatsApp 📲</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-placeholder">
+            <img src="logo.png" alt="Alqimia Luma" onerror="this.style.display='none'">
+        </div>
+        <h1 class="titulo-gigante" id="titulo-tienda">ALQIMIA LUMA</h1>
+    </header>
+
+    <div class="catalogo" id="contenedor-catalogo"></div>
+
+    <footer class="pie-pagina">
+        <p>📞 Contacto Alqimia Luma: +52 56 4931 4335</p>
+        <p>🌐 <a href="https://facebook.com/share/1WMubxvPra/" target="_blank" class="link-facebook">SÍGUENOS EN FACEBOOK</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
