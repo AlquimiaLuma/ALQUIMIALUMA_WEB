@@ -17,23 +17,26 @@ def guardar_json(ruta, datos):
 
 def pedir_categoria():
     print("\n--- SELECCIÓN DE SECCIÓN ---")
-    print("1. Hombres\n2. Mujeres\n3. Unisex")
-    op = input("Selecciona un número (1/2/3): ")
-    return "hombres" if op == '1' else "mujeres" if op == '2' else "unisex"
+    print("1. Hombres\n2. Mujeres\n3. Unisex\n4. General (Banner para toda la tienda)")
+    op = input("Selecciona un número (1/2/3/4): ")
+    if op == '1': return "hombres"
+    elif op == '2': return "mujeres"
+    elif op == '3': return "unisex"
+    else: return "general"
 
 def gestionar_ofertas():
-    ofertas = cargar_json(ARCHIVO_OFERTAS, {"hombres": {}, "mujeres": {}, "unisex": {}})
+    ofertas = cargar_json(ARCHIVO_OFERTAS, {"hombres": {}, "mujeres": {}, "unisex": {}, "general": {}})
 
     while True:
         limpiar_pantalla()
         print("\n--- 🏷️ GESTIÓN DE BANNERS DE OFERTAS ---")
-        for cat in ["hombres", "mujeres", "unisex"]:
+        for cat in ["general", "hombres", "mujeres", "unisex"]:
             data = ofertas.get(cat, {"activa": False, "texto": ""})
             estado = "🟢 ACTIVA" if data.get('activa') else "🔴 INACTIVA"
-            print(f"- [{cat.upper()}]: {estado} | Banner: '{data.get('texto', '')}'")
+            print(f"- [{cat.upper()}] : {estado} | Texto: '{data.get('texto', '')}'")
 
-        print("\n1. Encender / Modificar Banner de Oferta")
-        print("2. Apagar un Banner de Oferta")
+        print("\n1. Encender / Modificar Banner")
+        print("2. Apagar un Banner")
         print("3. Volver al menú principal")
         op = input("Elige una opción: ")
 
@@ -91,7 +94,10 @@ def menu_principal():
         elif op == '3':
             limpiar_pantalla()
             print("\n--- AÑADIR NUEVO PERFUME ---")
-            sub = pedir_categoria()
+            print("1. Hombres\n2. Mujeres\n3. Unisex")
+            sub_op = input("Selecciona sección (1/2/3): ")
+            sub = "hombres" if sub_op == '1' else "mujeres" if sub_op == '2' else "unisex"
+            
             nombre = input("\nNombre de la fragancia: ")
             try:
                 precio = int(input("Precio en pesos: "))
@@ -101,11 +107,8 @@ def menu_principal():
                 continue
             desc = input("Descripción persuasiva: ")
             
-            imagen_input = input("Nombre exacto de la foto con su formato (ej. sauvage.jpeg, foto1.png) [Enter para usar ✨]: ").strip()
-            if imagen_input == "":
-                imagen = "✨"
-            else:
-                imagen = imagen_input
+            imagen_input = input("Nombre exacto de la foto (ej. sauvage.jpeg) [Enter para usar ✨]: ").strip()
+            imagen = imagen_input if imagen_input != "" else "✨"
             
             datos['productos'].append({
                 "subseccion": sub, "nombre": nombre, "precio": precio, 

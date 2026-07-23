@@ -35,8 +35,15 @@ Promise.all([
     fetch('productos.json').then(r => r.json())
 ]).then(([datosOfertas, datosProductos]) => {
     ofertasGlobales = datosOfertas || {};
-    colocarEtiquetasOferta();
     
+    // Mostrar banner general si está activo
+    if (ofertasGlobales.general && ofertasGlobales.general.activa) {
+        document.getElementById("banner-general-contenedor").innerHTML = `
+            <div class="banner-oferta-contenedor">
+                <div class="banner-oferta-texto">${ofertasGlobales.general.texto}</div>
+            </div>`;
+    }
+
     if (datosProductos.estado === "cerrado") {
         document.getElementById("contenedor-catalogo").innerHTML = `
             <div class="contenedor-agotado">
@@ -51,22 +58,9 @@ Promise.all([
     }
 }).catch(e => console.log("Error cargando base de datos."));
 
-function colocarEtiquetasOferta() {
-    ['mujeres', 'hombres', 'unisex'].forEach(cat => {
-        if(ofertasGlobales[cat] && ofertasGlobales[cat].activa) {
-            let btn = document.getElementById(`btn-${cat}`);
-            if(btn) btn.innerHTML += ` <span class="etiqueta-oferta">🔥</span>`;
-        }
-    });
-}
-
 function renderizarCatalogo(productosArray, seccionActual) {
     let contenedor = document.getElementById("contenedor-catalogo");
     contenedor.innerHTML = ""; 
-    
-    if (seccionActual !== 'todos' && ofertasGlobales[seccionActual] && ofertasGlobales[seccionActual].activa) {
-        contenedor.innerHTML += `<div class="banner-oferta-contenedor"><div class="banner-oferta-texto">${ofertasGlobales[seccionActual].texto}</div></div>`;
-    }
     
     if(productosArray.length === 0) {
         contenedor.innerHTML += `
@@ -156,6 +150,11 @@ function enviarPedido() {
     for (let nombre in carrito) { 
         mensaje += `✨ ${carrito[nombre].cantidad}x ${nombre}%0A`; 
     }
-    mensaje += "%0A*Total a pagar: $" + totalPrecio + "*";
+    mensaje += "%0A*Total a pagar: $" + totalPrecio + "*%0A_(Vengo por recomendación / promoción de lanzamiento)_";
     window.open("https://wa.me/525649314335?text=" + mensaje, "_blank");
+}
+
+function abrirRegateo() {
+    let mensaje = "Hola Alqimia Luma 👋 Vengo navegando en su tienda y me interesa negociar el precio de una fragancia o aplicar un descuento por recomendado. ¿Hacemos trato?";
+    window.open("https://wa.me/525649314335?text=" + encodeURIComponent(mensaje), "_blank");
 }

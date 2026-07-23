@@ -5,6 +5,7 @@
     --oro: #EFBF04;          
     --lavanda: #D3D3FF;
     --rojo-oferta: #d32f2f;      
+    --verde-whatsapp: #25d366;
 }
 
 body { background: radial-gradient(circle at top center, var(--pergamino) 0%, var(--pergamino-oscuro) 100%); color: var(--deep-indigo); font-family: 'Josefin Sans', sans-serif; margin: 0; padding: 0; text-align: center; overflow-x: hidden; padding-top: 100px; min-height: 100vh; }
@@ -29,15 +30,29 @@ body.bloqueado { overflow: hidden; }
 .btn-entrar { background: var(--oro); color: var(--deep-indigo); border: none; padding: 15px 35px; font-size: 1.1rem; font-weight: 700; border-radius: 30px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
 .btn-entrar:hover { transform: scale(1.05); box-shadow: 0 0 30px var(--oro); }
 
-/* --- RESTO DE LA TIENDA --- */
+/* --- MENÚ Y NAVEGACIÓN --- */
 .menu-categorias { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--deep-indigo); display: flex; gap: 15px; padding: 15px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; overflow-x: auto; white-space: nowrap; align-items: center; justify-content: center; }
 .btn-cat { background: transparent; color: var(--pergamino); border: 1px solid var(--lavanda); padding: 8px 20px; border-radius: 20px; font-size: 14px; cursor: pointer; transition: 0.3s; font-weight: 600; position: relative; }
 .btn-cat:hover, .btn-cat.activo { background: var(--oro); color: var(--deep-indigo); border-color: var(--oro); }
 .etiqueta-oferta { position: absolute; top: -10px; right: -5px; background: var(--rojo-oferta); color: white; font-size: 10px; padding: 3px 6px; border-radius: 10px; font-weight: bold; animation: palpitar 2s infinite; }
 @keyframes palpitar { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
-.banner-oferta-contenedor { width: 100%; margin-bottom: 30px; padding: 0 20px; box-sizing: border-box; }
-.banner-oferta-texto { background-color: var(--rojo-oferta); color: white; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4); border: 2px dashed #fff; letter-spacing: 1px; }
 
+/* --- BANNER DE OFERTAS GENERALES --- */
+.banner-oferta-contenedor { width: 100%; max-width: 800px; margin: 10px auto 25px auto; padding: 0 20px; box-sizing: border-box; }
+.banner-oferta-texto { background: linear-gradient(135deg, var(--rojo-oferta), #b71c1c); color: white; padding: 15px 20px; border-radius: 12px; font-weight: bold; font-size: 1.05rem; box-shadow: 0 5px 20px rgba(211, 47, 47, 0.4); border: 2px dashed #fff; letter-spacing: 0.5px; text-align: center; }
+
+/* --- CAJA DE REGATEO EN HEADER --- */
+.caja-regateo-info { background-color: rgba(43, 0, 113, 0.06); border: 2px dashed var(--deep-indigo); border-radius: 14px; padding: 20px; max-width: 550px; margin: 15px auto 10px auto; box-sizing: border-box; text-align: center; }
+.caja-regateo-info h3 { margin-top: 0; font-family: 'Playfair Display', serif; color: var(--deep-indigo); font-size: 1.3rem; }
+.caja-regateo-info p { font-size: 14px; color: #444; line-height: 1.4; margin-bottom: 15px; }
+.btn-chat-regateo { background-color: var(--verde-whatsapp); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; font-size: 14px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; }
+.btn-chat-regateo:hover { transform: scale(1.03); background-color: #1ebe57; }
+
+/* --- BOTÓN FLOTANTE DE REGATEO --- */
+#btn-regateo-flotante { position: fixed; bottom: 20px; left: 20px; background-color: var(--verde-whatsapp); color: white; padding: 12px 22px; border-radius: 30px; font-size: 15px; font-weight: bold; cursor: pointer; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); z-index: 1000; border: 2px solid #fff; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+#btn-regateo-flotante:hover { transform: scale(1.08); }
+
+/* --- CONTENEDOR AGOTADO --- */
 .contenedor-agotado { background-color: var(--deep-indigo); border: 3px solid var(--oro); border-radius: 16px; padding: 40px 30px; max-width: 450px; margin: 50px auto; box-shadow: 0 10px 30px rgba(43, 0, 113, 0.4); text-align: center; }
 .texto-agotado-gigante { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--oro); margin: 0 0 15px 0; letter-spacing: 6px; text-shadow: 0 0 10px rgba(239, 191, 4, 0.5); }
 .subtexto-agotado { font-size: 1.1rem; color: var(--pergamino); margin: 0; }
@@ -46,7 +61,7 @@ body.bloqueado { overflow: hidden; }
 @keyframes latido-estrella { 0% { opacity: 0.15; transform: scale(0.85); } 100% { opacity: 0.7; transform: scale(1.15); } }
 
 header { display: flex; flex-direction: column; align-items: center; padding: 20px; }
-.logo-placeholder { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; background-color: rgba(43, 0, 113, 0.1); border: 3px solid var(--deep-indigo); display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(43, 0, 113, 0.2); margin-bottom: 20px; }
+.logo-placeholder { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; background-color: rgba(43, 0, 113, 0.1); border: 3px solid var(--deep-indigo); display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(43, 0, 113, 0.2); margin-bottom: 15px; }
 .logo-placeholder img { width: 100%; height: 100%; object-fit: cover; }
 .titulo-gigante { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; letter-spacing: 3px; color: var(--deep-indigo); }
 
@@ -64,6 +79,7 @@ button.btn-comprar:hover:not([disabled]) { transform: scale(1.05); box-shadow: 0
 button.btn-comprar:disabled { background-color: #e0e0e0; color: #888; cursor: not-allowed; }
 .tarjeta.agotado::after { content: "AGOTADO"; position: absolute; top: 40%; left: -15%; width: 130%; background-color: var(--deep-indigo); color: var(--oro); font-size: 1.5rem; font-weight: 600; transform: rotate(-25deg); text-align: center; padding: 10px 0; box-shadow: 0 4px 15px rgba(43, 0, 113, 0.4); z-index: 5; }
 
+/* --- CARRITO Y MODAL --- */
 #carrito-flotante { position: fixed; top: 80px; right: 20px; background-color: var(--deep-indigo); color: var(--oro); padding: 10px 25px; border-radius: 40px; font-size: 18px; font-weight: 600; cursor: pointer; box-shadow: 0 6px 20px rgba(43, 0, 113, 0.4); z-index: 1000; border: 2px solid var(--lavanda); display: flex; align-items: center; gap: 10px; }
 .luna-gigante { font-size: 2.5rem; filter: drop-shadow(0px 0px 5px rgba(239, 191, 4, 0.3)); }
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(43, 0, 113, 0.85); backdrop-filter: blur(6px); }
@@ -73,6 +89,7 @@ button.btn-comprar:disabled { background-color: #e0e0e0; color: #888; cursor: no
 .item-carrito { display: flex; justify-content: space-between; margin: 15px 0; font-weight: 600; }
 .total-modal { font-size: 22px; font-weight: 600; border-top: 2px solid var(--lavanda); padding-top: 15px; }
 .btn-whatsapp-modal { background-color: var(--oro); color: var(--deep-indigo); border: none; padding: 14px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; }
+
 .pie-pagina { background-color: var(--deep-indigo); color: var(--pergamino); padding: 40px 0; margin-top: 50px; border-top: 2px solid var(--lavanda); }
 .link-facebook { color: var(--oro); text-decoration: underline; font-weight: bold; letter-spacing: 1px; }
 
@@ -88,4 +105,5 @@ button.btn-comprar:disabled { background-color: #e0e0e0; color: #888; cursor: no
     .titulo-bienvenida { font-size: 2.2rem; }
     .contenido-bienvenida { padding: 40px 20px; }
     .logo-bienvenida { width: 120px; height: 120px; }
+    #btn-regateo-flotante { bottom: 10px; left: 10px; padding: 10px 15px; font-size: 13px; }
 }
