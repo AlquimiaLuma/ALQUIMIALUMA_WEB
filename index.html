@@ -55,23 +55,29 @@
             <img src="logo.png" alt="Alqimia Luma" onerror="this.style.display='none'">
         </div>
         <h1 class="titulo-gigante" id="titulo-tienda">ALQIMIA LUMA</h1>
+    </header>
+
+    <!-- EL CATÁLOGO DE PERFUMES AHORA APARECE PRIMERO -->
+    <div class="catalogo" id="contenedor-catalogo"></div>
+
+    <!-- SECCIÓN DE REGATEO Y ENCARGOS MOVIDA AL FINAL -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto 40px auto;">
         
-        <!-- SECCIÓN PERMANENTE DE REGATEO Y RECOMENDADOS -->
-        <div class="caja-regateo-info">
+        <!-- SECCIÓN PERMANENTE DE REGATEO -->
+        <div class="caja-regateo-info" style="margin: 0; flex: 1; min-width: 300px; max-width: 550px;">
             <h3>🤝 ¡Aquí sí se vale regatear!</h3>
             <p>¿Te gustó una fragancia pero buscas un mejor precio? ¿Vienes de parte de un amigo recomendado? Habla directo con nosotros, armamos un trato justo y te hacemos descuento.</p>
             <button class="btn-chat-regateo" onclick="abrirRegateo()">Negociar precio por WhatsApp 💬</button>
         </div>
 
-        <!-- NUEVA SECCIÓN: PEDIDOS POR ENCARGO -->
-        <div class="caja-regateo-info" style="background-color: rgba(239, 191, 4, 0.08); border-color: var(--oro); margin-top: 15px;">
+        <!-- SECCIÓN: PEDIDOS POR ENCARGO -->
+        <div class="caja-regateo-info" style="margin: 0; flex: 1; min-width: 300px; max-width: 550px; background-color: rgba(239, 191, 4, 0.08); border-color: var(--oro);">
             <h3 style="color: var(--oro);">🔍 ¿Buscas un aroma en específico?</h3>
             <p>Si tienes en mente un perfume, una marca especial o un aroma que no ves en nuestro catálogo, ¡nosotros te lo conseguimos sobre pedido!</p>
             <button class="btn-chat-regateo" style="background-color: var(--oro); color: var(--deep-indigo);" onclick="abrirEncargo()">Encargar perfume especial 📦</button>
         </div>
-    </header>
 
-    <div class="catalogo" id="contenedor-catalogo"></div>
+    </div>
 
     <footer class="pie-pagina">
         <p>📞 Contacto Alqimia Luma: +52 56 4931 4335</p>
@@ -85,7 +91,6 @@
         <div style="margin-top: 40px; padding-top: 25px; border-top: 1px solid rgba(211, 211, 255, 0.2);">
             <p style="font-size: 11px; color: var(--pergamino); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; opacity: 0.9;">Una marca de</p>
             
-            <!-- Aquí va tu logo recortado (solo el dibujo del gato y el triángulo) -->
             <img src="logo_astral.png" alt="Sello Astral Limit" style="width: 65px; margin-bottom: 10px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));">
             
             <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--oro); margin: 0; letter-spacing: 5px; text-shadow: 0 0 10px rgba(239, 191, 4, 0.3);">ASTRAL LIMIT</h2>
