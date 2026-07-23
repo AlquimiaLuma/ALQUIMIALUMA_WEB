@@ -158,3 +158,8 @@ function abrirRegateo() {
     let mensaje = "Hola Alqimia Luma 👋 Vengo navegando en su tienda y me interesa negociar el precio de una fragancia o aplicar un descuento por recomendado. ¿Hacemos trato?";
     window.open("https://wa.me/525649314335?text=" + encodeURIComponent(mensaje), "_blank");
 }
+
+function abrirEncargo() {
+    let mensaje = "Hola Alqimia Luma ✨ Estoy buscando un perfume en específico que no vi en su catálogo. ¿Podrían ayudarme a conseguirlo sobre pedido?";
+    window.open("https://wa.me/525649314335?text=" + encodeURIComponent(mensaje), "_blank");
+}
