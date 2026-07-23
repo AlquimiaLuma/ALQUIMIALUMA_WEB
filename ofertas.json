@@ -6,5 +6,9 @@
     "mujeres": {
         "activa": false,
         "texto": ""
+    },
+    "unisex": {
+        "activa": false,
+        "texto": ""
     }
 }

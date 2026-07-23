@@ -17,17 +17,17 @@ def guardar_json(ruta, datos):
 
 def pedir_categoria():
     print("\n--- SELECCIÓN DE SECCIÓN ---")
-    print("1. Hombres\n2. Mujeres")
-    op = input("Selecciona un número (1/2): ")
-    return "hombres" if op == '1' else "mujeres"
+    print("1. Hombres\n2. Mujeres\n3. Unisex")
+    op = input("Selecciona un número (1/2/3): ")
+    return "hombres" if op == '1' else "mujeres" if op == '2' else "unisex"
 
 def gestionar_ofertas():
-    ofertas = cargar_json(ARCHIVO_OFERTAS, {"hombres": {}, "mujeres": {}})
+    ofertas = cargar_json(ARCHIVO_OFERTAS, {"hombres": {}, "mujeres": {}, "unisex": {}})
 
     while True:
         limpiar_pantalla()
         print("\n--- 🏷️ GESTIÓN DE BANNERS DE OFERTAS ---")
-        for cat in ["hombres", "mujeres"]:
+        for cat in ["hombres", "mujeres", "unisex"]:
             data = ofertas.get(cat, {"activa": False, "texto": ""})
             estado = "🟢 ACTIVA" if data.get('activa') else "🔴 INACTIVA"
             print(f"- [{cat.upper()}]: {estado} | Banner: '{data.get('texto', '')}'")

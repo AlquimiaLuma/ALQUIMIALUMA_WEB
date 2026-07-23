@@ -52,7 +52,7 @@ Promise.all([
 }).catch(e => console.log("Error cargando base de datos."));
 
 function colocarEtiquetasOferta() {
-    ['mujeres', 'hombres'].forEach(cat => {
+    ['mujeres', 'hombres', 'unisex'].forEach(cat => {
         if(ofertasGlobales[cat] && ofertasGlobales[cat].activa) {
             let btn = document.getElementById(`btn-${cat}`);
             if(btn) btn.innerHTML += ` <span class="etiqueta-oferta">🔥</span>`;
@@ -103,7 +103,12 @@ function filtrarSeccion(subseccion) {
     let btnActivo = document.getElementById(`btn-${subseccion}`);
     if(btnActivo) btnActivo.classList.add('activo');
 
-    let titulos = { 'todos': 'ALQIMIA LUMA', 'mujeres': 'ESENCIAS PARA MUJER', 'hombres': 'FRAGANCIAS PARA HOMBRE' };
+    let titulos = { 
+        'todos': 'ALQIMIA LUMA', 
+        'mujeres': 'ESENCIAS PARA MUJER', 
+        'hombres': 'FRAGANCIAS PARA HOMBRE',
+        'unisex': 'FRAGANCIAS UNISEX'
+    };
     document.getElementById("titulo-tienda").innerText = titulos[subseccion];
 
     if (subseccion === 'todos') {

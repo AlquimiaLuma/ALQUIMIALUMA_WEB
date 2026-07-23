@@ -4,7 +4,7 @@
         {
             "subseccion": "hombres",
             "nombre": "Dior Sauvage Parfum (100ml)",
-            "precio": 3500,
+            "precio": 850,
             "stock": 2,
             "desc": "Notas amaderadas y bergamota. Despierta tu lado salvaje y magnético; proyectarás una estela de frescura nocturna que dejará a todos intrigados.",
             "imagen": "sauvage.jpeg"
@@ -12,7 +12,7 @@
         {
             "subseccion": "hombres",
             "nombre": "Versace Eros (200ml)",
-            "precio": 2800,
+            "precio": 950,
             "stock": 1,
             "desc": "Menta, manzana verde y vainilla. El aura de un dios griego. Proyectarás un magnetismo dulce y vibrante que te hará el centro de atención.",
             "imagen": "eros.jpeg"
@@ -20,15 +20,15 @@
         {
             "subseccion": "hombres",
             "nombre": "Paco Rabanne 1 Million (100ml)",
-            "precio": 2500,
+            "precio": 750,
             "stock": 1,
             "desc": "Cuero, canela y mandarina. El aroma del éxito absoluto. Te sentirás poderoso, invencible y listo para conquistar cualquier reto.",
             "imagen": "1million.jpeg"
         },
         {
-            "subseccion": "hombres",
+            "subseccion": "unisex",
             "nombre": "Calvin Klein CK One (200ml)",
-            "precio": 1500,
+            "precio": 750,
             "stock": 1,
             "desc": "Té verde, papaya y bergamota. Frescura infinita y limpia. Te envolverá en una vibra relajada, juvenil y perfecta para el día a día.",
             "imagen": "ckone.jpeg"
@@ -36,7 +36,7 @@
         {
             "subseccion": "mujeres",
             "nombre": "Chanel Coco Mademoiselle (100ml)",
-            "precio": 4000,
+            "precio": 900,
             "stock": 1,
             "desc": "Naranja, rosa turca y pachulí. Un oriental fresco. Caminarás con una elegancia rebelde, dejando un rastro de sofisticación empoderada.",
             "imagen": "coco.jpeg"
@@ -44,7 +44,7 @@
         {
             "subseccion": "mujeres",
             "nombre": "Chance Chanel Eau de Parfum (100ml)",
-            "precio": 3800,
+            "precio": 850,
             "stock": 1,
             "desc": "Pimienta rosa, jazmín y pachulí ambarino. Un torbellino floral cálido. Sentirás una ola de misterio y calidez que te acompañará día y noche.",
             "imagen": "chance_edp.jpeg"
@@ -52,7 +52,7 @@
         {
             "subseccion": "mujeres",
             "nombre": "Chance Chanel Eau Fraîche (100ml)",
-            "precio": 3500,
+            "precio": 850,
             "stock": 1,
             "desc": "Madera de teca, limón y jazmín. Una explosión de energía pura. Olerás radiante, chispeante y llena de vitalidad vibrante.",
             "imagen": "chance_ef.jpeg"
@@ -60,7 +60,7 @@
         {
             "subseccion": "mujeres",
             "nombre": "Valentino Donna Born in Roma Intense",
-            "precio": 3400,
+            "precio": 850,
             "stock": 1,
             "desc": "Vainilla bourbon, jazmín y toques amaderados. Alta costura en tu piel. Irradiarás una sensualidad dulce, moderna y profundamente cautivadora.",
             "imagen": "valentino.jpeg"
@@ -68,7 +68,7 @@
         {
             "subseccion": "mujeres",
             "nombre": "JPG Scandal Intense (100ml)",
-            "precio": 3200,
+            "precio": 850,
             "stock": 1,
             "desc": "Miel jugosa, jazmín y caramelo salado. Una bomba de seducción. Olerás deliciosamente atrevida, ideal para romper las reglas de la noche.",
             "imagen": "scandal.jpeg"
