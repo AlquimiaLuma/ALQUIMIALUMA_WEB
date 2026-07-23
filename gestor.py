@@ -101,7 +101,7 @@ def menu_principal():
                 continue
             desc = input("Descripción persuasiva: ")
             
-            imagen_input = input("Nombre exacto de la foto con su formato (ej. sauvage.jpg, foto1.png) [Enter para usar ✨]: ").strip()
+            imagen_input = input("Nombre exacto de la foto con su formato (ej. sauvage.jpeg, foto1.png) [Enter para usar ✨]: ").strip()
             if imagen_input == "":
                 imagen = "✨"
             else:
