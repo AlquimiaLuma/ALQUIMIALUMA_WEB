@@ -45,7 +45,7 @@
             "subseccion": "mujeres",
             "nombre": "Chance Chanel Eau de Parfum (100ml)",
             "precio": 750,
-            "stock": 1,
+            "stock": 0,
             "desc": "Pimienta rosa, jazmín y pachulí ambarino. Un torbellino floral cálido. Sentirás una ola de misterio y calidez que te acompañará día y noche.",
             "imagen": "chance_edp.jpeg"
         },
@@ -53,7 +53,7 @@
             "subseccion": "mujeres",
             "nombre": "Chance Chanel Eau Fraîche (100ml)",
             "precio": 750,
-            "stock": 1,
+            "stock": 0,
             "desc": "Madera de teca, limón y jazmín. Una explosión de energía pura. Olerás radiante, chispeante y llena de vitalidad vibrante.",
             "imagen": "chance_ef.jpeg"
         },
