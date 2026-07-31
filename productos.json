@@ -2,6 +2,54 @@
     "estado": "abierto",
     "productos": [
         {
+            "subseccion": "mujeres",
+            "nombre": "Carolina Herrera 212 VIP Rosé",
+            "precio": 700,
+            "stock": 2,
+            "desc": "Notas de champagne rosé, flor de durazno y almizcle. Una esencia festiva, elegante y magnética para destacar con estilo en cualquier lugar.",
+            "imagen": "212viprose.jpeg"
+        },
+        {
+            "subseccion": "mujeres",
+            "nombre": "212 VIP Rosé \"I Love NY\" (Ed. Limitada)",
+            "precio": 700,
+            "stock": 2,
+            "desc": "Edición especial con notas de café, tiramisú y maderas dulces. Un toque vibrante y moderno inspirado en la energía inagotable de Nueva York.",
+            "imagen": "212vipny.jpeg"
+        },
+        {
+            "subseccion": "mujeres",
+            "nombre": "Valentino Donna Born in Roma Intense (100ml)",
+            "precio": 750,
+            "stock": 2,
+            "desc": "Vainilla bourbon, jazmín y toques amaderados. Alta costura en tu piel. Irradiarás una sensualidad dulce, moderna y profundamente cautivadora.",
+            "imagen": "valentino.jpeg"
+        },
+        {
+            "subseccion": "mujeres",
+            "nombre": "JPG Scandal Intense (100ml)",
+            "precio": 750,
+            "stock": 2,
+            "desc": "Miel jugosa, jazmín y caramelo salado. Una bomba de seducción. Olerás deliciosamente atrevida, ideal para romper las reglas de la noche.",
+            "imagen": "scandal.jpeg"
+        },
+        {
+            "subseccion": "hombres",
+            "nombre": "Acqua Di Giò Parfum [Frasco Negro] (100ml)",
+            "precio": 750,
+            "stock": 2,
+            "desc": "Intensidad marina combinada con notas vibrantes de incienso y pachulí. Un aura profunda, misteriosa y sumamente masculina.",
+            "imagen": "adg_parfum.jpeg"
+        },
+        {
+            "subseccion": "hombres",
+            "nombre": "Acqua Di Giò Profondo [Frasco Azul] (100ml)",
+            "precio": 750,
+            "stock": 2,
+            "desc": "Frescura oceánica con esencias minerales, mandarina verde y ámbar. Una inmersión total al azul profundo que proyecta limpieza y carácter.",
+            "imagen": "adg_profondo.jpeg"
+        },
+        {
             "subseccion": "hombres",
             "nombre": "Dior Sauvage Parfum (100ml)",
             "precio": 750,
@@ -11,9 +59,9 @@
         },
         {
             "subseccion": "hombres",
-            "nombre": "Versace Eros (200ml)",
+            "nombre": "Versace Eros (200ml XL)",
             "precio": 850,
-            "stock": 1,
+            "stock": 2,
             "desc": "Menta, manzana verde y vainilla. El aura de un dios griego. Proyectarás un magnetismo dulce y vibrante que te hará el centro de atención.",
             "imagen": "eros.jpeg"
         },
@@ -21,57 +69,25 @@
             "subseccion": "hombres",
             "nombre": "Paco Rabanne 1 Million (100ml)",
             "precio": 650,
-            "stock": 1,
+            "stock": 2,
             "desc": "Cuero, canela y mandarina. El aroma del éxito absoluto. Te sentirás poderoso, invencible y listo para conquistar cualquier reto.",
             "imagen": "1million.jpeg"
         },
         {
-            "subseccion": "unisex",
-            "nombre": "Calvin Klein CK One (200ml)",
-            "precio": 650,
+            "subseccion": "hombres",
+            "nombre": "Calvin Klein CK Be (100ml)",
+            "precio": 700,
             "stock": 1,
+            "desc": "Notas limpias de lavanda, menta y almizcle suave. Una fragancia íntima, cálida y relajada que invita a acercarse y dejar huella.",
+            "imagen": "ckbe.jpeg"
+        },
+        {
+            "subseccion": "unisex",
+            "nombre": "Calvin Klein CK One (200ml XL)",
+            "precio": 650,
+            "stock": 2,
             "desc": "Té verde, papaya y bergamota. Frescura infinita y limpia. Te envolverá en una vibra relajada, juvenil y perfecta para el día a día.",
             "imagen": "ckone.jpeg"
-        },
-        {
-            "subseccion": "mujeres",
-            "nombre": "Chanel Coco Mademoiselle (100ml)",
-            "precio": 800,
-            "stock": 0,
-            "desc": "Naranja, rosa turca y pachulí. Un oriental fresco. Caminarás con una elegancia rebelde, dejando un rastro de sofisticación empoderada.",
-            "imagen": "coco.jpeg"
-        },
-        {
-            "subseccion": "mujeres",
-            "nombre": "Chance Chanel Eau de Parfum (100ml)",
-            "precio": 750,
-            "stock": 0,
-            "desc": "Pimienta rosa, jazmín y pachulí ambarino. Un torbellino floral cálido. Sentirás una ola de misterio y calidez que te acompañará día y noche.",
-            "imagen": "chance_edp.jpeg"
-        },
-        {
-            "subseccion": "mujeres",
-            "nombre": "Chance Chanel Eau Fraîche (100ml)",
-            "precio": 750,
-            "stock": 0,
-            "desc": "Madera de teca, limón y jazmín. Una explosión de energía pura. Olerás radiante, chispeante y llena de vitalidad vibrante.",
-            "imagen": "chance_ef.jpeg"
-        },
-        {
-            "subseccion": "mujeres",
-            "nombre": "Valentino Donna Born in Roma Intense",
-            "precio": 750,
-            "stock": 1,
-            "desc": "Vainilla bourbon, jazmín y toques amaderados. Alta costura en tu piel. Irradiarás una sensualidad dulce, moderna y profundamente cautivadora.",
-            "imagen": "valentino.jpeg"
-        },
-        {
-            "subseccion": "mujeres",
-            "nombre": "JPG Scandal Intense (100ml)",
-            "precio": 750,
-            "stock": 1,
-            "desc": "Miel jugosa, jazmín y caramelo salado. Una bomba de seducción. Olerás deliciosamente atrevida, ideal para romper las reglas de la noche.",
-            "imagen": "scandal.jpeg"
         }
     ]
 }
